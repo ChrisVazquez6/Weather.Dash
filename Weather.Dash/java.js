@@ -17,8 +17,9 @@ document.getElementById('Search').addEventListener('click',event=>{
          <div class="content">
             <div class="title">${res.data.city.name}
               <p>${res.data.list[0].dt_txt}</p>
-              <p> temp: ${res.data.list[0].main.temp}°F</p>
-              <p> humidity: ${res.data.list[0].main.humidity}%</p>
+              <p> Temp: ${res.data.list[0].main.temp}°F</p>
+              <p> Humidity: ${res.data.list[0].main.humidity}%</p>
+              <p> Windspeed: ${res.data.list[0].wind.speed}mph</p>
           </div>
         </div>
       </div>
