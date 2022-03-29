@@ -11,11 +11,14 @@ document.getElementById('Search').addEventListener('click',event=>{
       console.log(resp.data);
       document.getElementById('maindiv').innerHTML=`
       <div class="card">
+      <div class= "card-image">
+        <img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@2x.png"
         <div class="card-content">
          <div class="content">
             <div class="title">${res.data.city.name}
-              Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-            </div>
+              <p>${res.data.list[0].dt_txt}</p>
+          </div>
+        </div>
       </div>
   </div>
 </div>
