@@ -36,6 +36,39 @@ document.getElementById('Search').addEventListener('click',event=>{
   </div>
 </div>
       `
+      let WeatherDays = []
+      let day1 = {
+        date: res.data.list[8].dt_txt,
+        icon: res.data.list[8].weather[0].icon,
+        temp: res.data.list[8].main.temp,
+        humidity: res.data.list[0].main.humidity
+      }
+      let day2 = {
+        date: res.data.list[16].dt_txt,
+        icon: res.data.list[16].weather[0].icon,
+        temp: res.data.list[16].main.temp,
+        humidity: res.data.list[16].main.humidity
+      }
+      let day3 = {
+        date: res.data.list[24].dt_txt,
+        icon: res.data.list[24].weather[0].icon,
+        temp: res.data.list[24].main.temp,
+        humidity: res.data.list[24].main.humidity
+      }
+      let day4 = {
+        date: res.data.list[32].dt_txt,
+        icon: res.data.list[32].weather[0].icon,
+        temp: res.data.list[32].main.temp,
+        humidity: res.data.list[32].main.humidity
+      }
+      let day5 = {
+        date: res.data.list[39].dt_txt,
+        icon: res.data.list[39].weather[0].icon,
+        temp: res.data.list[39].main.temp,
+        humidity: res.data.list[39].main.humidity
+      }
+      console.log(day1, day2, day3, day4, day5);
+      }
     })
   })
 })
