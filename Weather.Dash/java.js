@@ -37,8 +37,8 @@ document.getElementById('Search').addEventListener('click',event=>{
 </div>
       `
       let WeatherDays = []
-      let day1 = {
-        date: res.data.list[8].dt_txt,
+        let day1 = {
+       date: res.data.list[8].dt_txt,
         icon: res.data.list[8].weather[0].icon,
         temp: res.data.list[8].main.temp,
         humidity: res.data.list[0].main.humidity
@@ -60,15 +60,32 @@ document.getElementById('Search').addEventListener('click',event=>{
         icon: res.data.list[32].weather[0].icon,
         temp: res.data.list[32].main.temp,
         humidity: res.data.list[32].main.humidity
-      }
-      let day5 = {
+    }
+  let day5 = {
         date: res.data.list[39].dt_txt,
         icon: res.data.list[39].weather[0].icon,
         temp: res.data.list[39].main.temp,
         humidity: res.data.list[39].main.humidity
       }
-      console.log(day1, day2, day3, day4, day5);
-      }
+      WeatherDays.push(day1, day2, day3, day4, day5)
+      console.log(WeatherDays);
+
+      WeatherDays.forEach(day => {
+        document.getElementById("allfivedays").innerHTML +=`
+        <div class="card">
+  <div class="card-content">
+  <div class="card-image">
+  <img src="http://openweathermap.org/img/wn/${day.icon}@4x.png">
+    <div class="content">
+      <p> temp:${day.temp}°F</p>
+      <p> Humidity:${day.humidity}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+`
+      
+      })
     })
   })
 })
